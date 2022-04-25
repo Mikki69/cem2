@@ -1,0 +1,198 @@
+body{
+    background: #25473a ;
+}
+#header{
+    display: flex;
+    border-radius: 30px;
+    margin: 3% 5% 0 5%;
+    max-width: 90%;
+    background: azure;
+}
+header{
+    font-size: 200%;
+    margin: 18px auto;
+    display:flex;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom:1px solid #344F79;
+    justify-content: space-between;
+}
+header img{
+    width: 100px ;
+}
+header .mnu_top{
+    list-style-type: none;
+}
+header .mnu_top li{
+    display: inline-block;
+    margin-left: 40px;
+}
+header .mnu_top li a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #2A6658;
+    font-weight: 800;
+}
+header .mnu_top li a:hover{
+    color: #0099ff;
+}
+
+#text{
+    display: flex;
+    border-radius: 30px 30px 0 0 ;
+    margin: 1% 5% 0% 5%;
+    flex-direction: column;
+    max-width: 95%;
+    background: azure;
+}
+h1{
+    font-family:Consolas;
+    text-align:center;
+    font-size: 30px;
+    color: #2A6658;
+    padding:1% 0 1% 0 ;
+}
+h3{
+    background: rgb(149, 229, 185);
+    border-radius: 30px;
+    display: flex;
+    margin: 0% 20% 4% 20%;
+    color: #2A6658;
+    border-left: 50px;
+    flex-direction: column;
+    height: auto;
+}
+.text{
+    padding:5% 10% 5% 10% ;
+    font-size: 23px;
+    font-family: Tahoma;
+}
+h2{
+    text-align: center;
+    border-radius:0 0 30px 30px;
+    background: #2A6658;
+    color: aliceblue;
+    height: 150px;
+    display: block;
+    margin: 0% 5% 2% 5%;
+}
+.logo{
+    padding: 25px 0 0 0;
+    width: 50px;
+}
+.god{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 80%;
+}
+textarea {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 650px;
+    resize: none;
+} 
+.slideshow {
+    border-radius: 20px;
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+.slideshow-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 15s infinite;
+    pointer-events: none;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0s;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+    animation-delay: 5s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+    animation-delay: 10s;
+}
+.slideshow-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 40s infinite;
+}
+@keyframes slideanim {
+    12.5%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    25%{
+        opacity: 1;
+        pointer-events: auto;
+    }    
+    37.5%{
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    #header{
+        border-radius: 10px;
+    }
+    header{
+        font-size: 60%;
+        margin: 10px auto;
+        padding-bottom: 3px;
+    }
+    header img{
+        width: 50px;
+    }
+    header .mnu_top li{
+        display: inline-block;
+        margin-left: 5px;
+    }
+    #text{
+        border-radius: 10px 10px 0 0;
+    }
+    .slideshow {
+        border-radius: 10px;
+        width: 80%;
+        height: 150px;
+    }
+    h1{
+        font-size:20px;
+    }
+    .text{
+        font-size: 10px;
+        font-family: Tahoma;
+    }
+    h3{
+        border-radius: 10px;
+        display: flex;
+        margin: 0% 10% 4% 10%;
+        border-left: 50px;
+    }
+    h2{
+        border-radius:0 0 10px 10px;
+        height: 80px;
+    } 
+    .logo{
+        padding: 10px 0 0 0;
+        width: 25px;
+    }
+    .god{
+        font-size: 50%;
+    }
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+}
